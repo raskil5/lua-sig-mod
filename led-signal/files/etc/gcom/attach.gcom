@@ -1,0 +1,3 @@
+opengt
+send "AT+CGATT?\r"
+expect "CGATT:"

@@ -17,6 +17,9 @@ endef
 define Package/led-signal/install
     $(INSTALL_DIR) $(1)/usr/bin
     $(INSTALL_BIN) $(PKG_BUILD_DIR)/files/usr/bin/led_signal.lua $(1)/usr/bin/led_signal.lua
+    $(INSTALL_DIR) $(1)/etc/gcom
+    $(INSTALL_DATA) $(PKG_BUILD_DIR)/files/etc/gcom/signal.gcom $(1)/etc/gcom/signal.gcom
+    $(INSTALL_DATA) $(PKG_BUILD_DIR)/files/etc/gcom/attach.gcom $(1)/etc/gcom/attach.gcom
 endef
 
 $(eval $(call BuildPackage,led-signal))
