@@ -1,3 +1,0 @@
-opengt
-send "AT+CSQ\r"
-expect "CSQ:"
